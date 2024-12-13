@@ -1,0 +1,91 @@
+/* >->->->->->->->->-> Wrapping Start >->->->->->->->->-> */
+.wrapping {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: calc(100vh - 69px);
+    border-radius: 10px 0 0;
+    background-color: var(--body-color-light);
+    width: 100%;
+}
+.wrapping::-webkit-scrollbar{
+    width: 0;
+}
+.wrapping svg {
+    cursor: pointer;
+}
+/* <-<-<-<-<-<-<-<-<-< wrapping end <-<-<-<-<-<-<-<-<-< */
+/* >->->->->->->->->-> Setting Start >->->->->->->->->-> */
+.setting {
+    color: var(--text-color);
+    padding: 25px;
+    height: calc(100vh - 110px);
+}.setting p {
+    font-size: 15px;
+    color: black;
+}
+.setting span {
+    font-size: 13px;
+    opacity: .9;
+}
+.setting_items {
+    margin: 20px 0 50px;
+}
+.setting_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--body-color);
+    border-radius: 5px;
+    border: 1px solid #EAEAEA;
+    margin-bottom: 5px;
+}
+
+.on_off_btn {
+    padding: 1px 2px;
+    width: 45px;
+    border: 1px solid #c4c4c4;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.on_off_btn.active {
+    animation: example 10s linear 10s infinite alternate;
+    background-color: #1973A2;
+    color: #fff;
+    text-align: right;
+}
+/* Other */
+.other_item{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 35px;
+}
+.other_item a {
+    color: #31799f;
+    font-weight: 500;
+}
+.other_item a:hover {
+    color: #1E4A62;
+}
+footer {
+    padding: 30px 0;
+}
+footer p {
+    margin-bottom: 5px;
+}
+/* <-<-<-<-<-<-<-<-<-< setting end <-<-<-<-<-<-<-<-<-< */
+/* <-<-<-<-<-<-<-<-<-< home page end <-<-<-<-<-<-<-<-<-< */
+
+/* >->->->->->->->->-> Responsive Start >->->->->->->->->-> */
+@media screen and (max-width: 992px) {
+    .other_item{
+     grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 768px) {
+    .other_item{
+     grid-template-columns: 1fr;
+    }
+}
+/* <-<-<-<-<-<-<-<-<-< responsive end <-<-<-<-<-<-<-<-<-< */

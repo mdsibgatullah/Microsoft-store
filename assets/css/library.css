@@ -1,0 +1,268 @@
+
+
+/* library software */
+.overlay::after{
+    position: absolute;
+    content: '';
+    width: 0px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.overlay.active::after {
+    width: 100%;
+}
+/* <-<-<-<-<-<-<-<-<-< wrapping end <-<-<-<-<-<-<-<-<-< */
+/* >->->->->->->->->-> Software Start >->->->->->->->->-> */
+.library {
+    padding: 25px;
+    color: var(--text-color);
+    height: calc(100vh - 110px);
+}
+.library span, .library p, .library li {
+    font-size: 14px;
+}
+.library_text, .app_update, .library_item, .app_name, .manage_update {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+.library_text {
+    margin: 20px 0;
+}
+.app_update p, .update_btn {
+    padding: 7px 10px;
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 5px;
+}
+.app_update p:hover {
+    background-color: var(--body-color);
+}
+.update_btn {
+    background-color: #006499;
+    color: var(--text-color-light);
+}
+.update_btn:hover {
+    background-color: #1973A2;
+}
+.library_items {
+    padding: 15px 10px;
+    border: 1px solid #EEEEEE;
+    background-color: #fdfdfd;
+    border-radius: 5px;
+}
+.library_items:hover {
+    background-color: var(--body-color-light);
+    border-bottom: 1px solid #dadada;
+}
+.app_name img {
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+}
+.manage_btn {
+    width: 100px;
+    text-align: center;
+}
+.manage_menu, .manage_menu_svg{
+    padding: 7px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+.manage_menu:hover {
+    background-color: var(--body-color);
+}
+.manage_menu .software_manage_list {
+    position: absolute;
+    width: 140px;
+    height: 0%;
+    right: 0px;
+    background-color: #e1e1e1;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 2px 0 4px #969696;
+    overflow: hidden;
+    transition: 0.3s;
+    z-index: 2;
+}
+.manage_menu .software_manage_list.active,
+.software_contents .manage_menu.active .software_manage_list {
+    height: 100%;
+}
+
+.software_manage_list p {
+    margin: 8px 5px 5px;
+}
+.mobile_library {
+    display: none;
+}
+
+.library_software {
+    color: black;
+
+}
+.software_menu, .software_list, .software_list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.software_menu {
+    padding: 10px;
+    margin:40px 0 15px;
+    position: relative;
+}
+.software_list li {
+    padding: 8px 20px;
+    border: 1px solid #e2e2e2;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: var(--body-color-light);
+    transition: .6s;
+}
+.software_list li:hover {
+    background-color: var(--body-color-light);
+}
+.software_list li.active {
+    background-color: #fff;
+    border: 1px solid #006499;
+    color: #006499;
+    transform: translateX(3px);
+}
+.software_menu p {
+    padding: 6px 15px;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.software_menu_head{
+    display: none;
+}
+.filter {
+    position: relative;
+}
+.filter_list {
+    position: absolute;
+    width: 200px;
+    background-color: #E9E9E9;
+    right: 0;
+    top: 45px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #bebebe;
+    z-index: 1;
+    max-height: 0px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.filter_list li {
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+    margin: 5px;
+}
+.filter_list li:hover {
+    background-color: #dbdbdb;
+}
+.filter_list.active {
+    max-height: 130px;
+}
+/* software contents */
+.software_contents, .software_games, .software_tv, .software_included {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.software_contents .manage_btn{
+    border: 1px solid #e2e2e2;
+    background-color: #FDFDFD;
+    color: black;
+    font-size: 14px;
+}
+.software_contents .manage_btn:hover {
+    border-bottom: 1px solid #c4c4c4;
+    background-color: var(--body-color-light);
+}
+.software_contents .active .software_manage_list {
+    text-align: left;
+    height: 60px !important;
+}
+.software_contents .software_manage_list svg{
+    margin-right: 8px;
+}
+/* software_games */
+.software_games, .software_tv, .software_included{
+    height: calc(100vh - 100px);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+/* <-<-<-<-<-<-<-<-<-< software end <-<-<-<-<-<-<-<-<-< */
+/* <-<-<-<-<-<-<-<-<-< home page end <-<-<-<-<-<-<-<-<-< */
+
+/* >->->->->->->->->-> Responsive Start >->->->->->->->->-> */
+@media screen and (max-width: 992px) {
+    /* library */
+    .library_apps {
+        display: none;
+    }
+    .manage_btn{
+        display: block;
+    }
+}
+@media screen and (max-width: 768px) {
+    .manage_btn{
+        display: none;
+    }
+    .library_paused {
+        display: none;
+    }
+    .mobile_library {
+        display: block;
+        text-align: center;
+        margin-top: 15px;
+    }
+    .mobile_btn {
+        display: block;
+        width: 96%;
+        margin-bottom: 10px;
+    }
+    .library_text {
+        flex-wrap: wrap;
+    }
+    /* software */
+    .software_menu_head {
+        display: block;
+    }
+    .software_list {
+        position: absolute;
+        width: 180px;
+        top: 45px;
+        background-color: #ebebeb;
+        border-radius: 5px;
+        box-shadow: 0 4px 10px #c2c2c2;
+        flex-direction: column;
+        align-items: flex-start;
+        z-index: 1;
+        gap: 0px;
+        max-height: 0px;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+    .software_list.active {
+        max-height: 160px;
+    }
+    .software_list li {
+        background-color: transparent;
+        border: none;
+        color: var(--text-color);
+        border-radius: 5px;
+        margin: 2px 5px;
+        border: 1px solid transparent;
+    }
+}
+/* <-<-<-<-<-<-<-<-<-< responsive end <-<-<-<-<-<-<-<-<-< */

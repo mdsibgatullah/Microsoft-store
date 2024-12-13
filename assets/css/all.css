@@ -1,0 +1,172 @@
+
+/* >->->->->->->->->->
+
+[Typography]
+	[ This template has one font typography ]
+		Typography 1: 'Roboto', sans-serif;
+		Typography 2: 'Poppins', sans-serif;
+
+<-<-<-<-<-<-<-<-<-< */
+
+/* >->->->->->->->->-> IMPORT FONTS >->->->->->->->->-> */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: inherit;
+  }
+}
+/* >->->->->->->->->-> 
+----Comment line----
+1. Root Variable
+2. Default Css
+3. Header top
+4. Home page
+5. Header left
+6. wrapping
+7. Home
+
+<-<-<-<-<-<-<-<-<-< */
+
+/* >->->->->->->->->-> Root Variable >->->->->->->->->-> */
+:root{
+    /* --body-color-- */
+    --bg-primary-color: #fff;
+    --body-color: #f3f3f3;
+    --body-color-light: #F9F9F9;
+
+    /* text-color */
+    --text-color: #1B1B1B;
+    --text-color-light: #fff;
+
+}
+
+/* >->->->->->->->->-> Default Css >->->->->->->->->-> */
+h1,h2,h3,h4,h5,p {
+    margin: 0;
+}
+body{
+    font-family: "Roboto", sans-serif;
+    background-color: var(--body-color);
+    font-size: 16px;
+    margin: 0;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style: none;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+svg.bi {
+    margin-bottom: -2px;
+}
+a{
+    color: inherit;
+}
+
+
+/* >->->->->->->->->-> Header Top Start >->->->->->->->->-> */
+.header_top {
+    right: 0;
+    padding: 15px 30px;
+    background-color: var(--body-color);
+}
+.header_search {
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 8px;
+    border: 1px solid #cececee7;
+    background-color: #fbfbfb;
+    display: flex;
+    justify-content: space-between;
+}
+.input_search {
+    width: calc(93% - 25px);
+    border: none;
+    outline: none;
+    margin-right: 15px;
+    background-color: #fbfbfb;
+}
+/* <-<-<-<-<-<-<-<-<-< header top end <-<-<-<-<-<-<-<-<-< */
+
+/* >->->->->->->->->-> Home page Start >->->->->->->->->-> */
+.home_page{
+    display: flex;
+}
+/* >->->->->->->->->->Header Left Start >->->->->->->->->-> */
+.header_left, .header_top, .store_logo, .header_top .icon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.header_left {
+    padding: 0 10px 10px 10px;
+    flex-direction: column;
+    width: 50px;
+    height: calc(100vh - 88px);
+    text-align: center;
+    background-color: var(--body-color);
+}
+.header_left li {
+    padding: 15px 16px;
+    color: #5f5f5f;
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+.header_left li:hover{
+    background-color: #EAEAEA;
+    border-radius: 5px;
+    color: #191919;
+}
+/* <-<-<-<-<-<-<-<-<-< header left end <-<-<-<-<-<-<-<-<-< */
+
+/* >->->->->->->->->-> Wrapping Start >->->->->->->->->-> */
+.wrapping {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: calc(100vh - 69px);
+    border-radius: 10px 0 0;
+    background-color: var(--body-color-light);
+    width: 100%;
+}
+.wrapping::-webkit-scrollbar{
+    width: 0;
+}
+.wrapping svg {
+    cursor: pointer;
+}
+/* <-<-<-<-<-<-<-<-<-< wrapping end <-<-<-<-<-<-<-<-<-< */
+/* >->->->->->->->->-> Home Start >->->->->->->->->-> */
+.home {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+    padding: 25px 0 0 25px;
+    height: calc(100vh - 110px);
+}
+/* <-<-<-<-<-<-<-<-<-< home end <-<-<-<-<-<-<-<-<-< */
+/* <-<-<-<-<-<-<-<-<-< home page end <-<-<-<-<-<-<-<-<-< */
+
+/* >->->->->->->->->-> Responsive Start >->->->->->->->->-> */
+@media screen and (max-width: 992px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 576px) {
+}
+@media screen and (max-width: 400px) {
+}
+
+@media screen and (max-height: 460px) {
+}
+/* <-<-<-<-<-<-<-<-<-< responsive end <-<-<-<-<-<-<-<-<-< */
